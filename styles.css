@@ -1,0 +1,378 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #000;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.subscribe-btn {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 30px;
+}
+
+.subscribe-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.logo {
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: 8px;
+  margin: 0;
+  font-family: 'Arial Black', Arial, sans-serif;
+  margin-left: 2px;
+}
+
+.menu-text {
+  font-size: 30px;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.subheading {
+  text-align: center;
+  font-size: 25px;
+  margin: -15px 0 20px;
+  color: #000000;
+  margin-right: 20px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+  gap: 0;
+}
+
+.image-section,
+.text-section {
+  flex: 0 0 50%;
+  height: 100%;
+}
+
+.image-section {
+  background-color: #fff;
+}
+
+.hero-img {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+  display: block;
+}
+
+.text-section {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  height: 85%;
+  text-align: center;
+}
+
+.featured {
+  color: #ffffff;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
+  margin-left: 0;
+}
+
+.date {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+.title {
+  font-size: 46px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-left: 0;
+}
+
+/* Most Popular Section */
+.popular-section {
+  padding: 60px 40px;
+  background: #fff;
+  margin-top: -100px;
+}
+
+.section-title {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-top: -20px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px;
+}
+
+.card img {
+  width: 100%;
+  min-height: 50vh;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+/* ✅ Added fix starts here */
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-title {
+  text-decoration: none;
+  color: #000;
+}
+/* ✅ Added fix ends here */
+
+.card-date {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0 5px;
+}
+
+.card-title {
+  font-size: 23px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.card-desc {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 70px;
+}
+
+/* ✅ Signup Section (zoom-proof left layout only updated) */
+.signup-section {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.signup-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.signup-left {
+  flex: 1;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  margin-left: 50px;
+}
+
+.signup-left h2 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.signup-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signup-left label {
+  font-size: 14px;
+  margin-left: 8x;
+}
+
+.signup-left input[type="email"] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  width: 350px;
+  margin-left: 37px;
+}
+
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  margin-left: 30px;
+}
+
+.signup-left button {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  margin-top: -50px;
+  margin-left: 300px;
+}
+
+.signup-left button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.signup-right {
+  flex: 1;
+  background-image: url('signup-image.jpg'); /* Make sure this file exists */
+  background-position: bottom right 40px;
+  background-repeat: no-repeat;
+  background-color: #111;
+  background-size: contain;
+  background-attachment: fixed;
+  margin-right: 50px;
+}
+
+/* footer1 */
+
+.custom-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-align: center;
+}
+
+.footer-hero h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.footer-hero h3 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.footer-hero p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.client-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.client-logos img {
+  height: 30px;
+  object-fit: contain;
+  color: #000;
+}
+
+.footer-text-columns {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-text-columns .column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-text-columns p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* footer2 */
+
+.client-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.client-logosimg {
+  height: 30px;
+  object-fit: contain;
+}
+
+/* White gap */
+.white-gap {
+  background-color: white;
+  height: 80px;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}

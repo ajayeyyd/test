@@ -1,0 +1,219 @@
+/* Fullscreen Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Header */
+  .menu-overlay-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 40px 80px;
+  }
+  
+  .menu-overlay-logo {
+    justify-content: center;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    grid-column: 2;
+  }
+  
+  .menu-close {
+    text-align: right;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    grid-column: 3;
+    margin-right: 250px;
+    margin-top: 10px;
+  }
+  
+  .menu-divider {
+    display: none; /* Removed the top line divider */
+  }
+  
+  /* Body Layout */
+  .menu-overlay-body {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 80px;
+    gap: 60px;
+    align-items: start;
+  }
+  
+  /* Left Side: Nav Links */
+  .menu-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top:-60px;
+     margin-left: 300px;
+  }
+  
+  .menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px; /* Increased font size */
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+  
+  .menu-links a:hover {
+    opacity: 0.7;
+  }
+  
+  .menu-social {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    margin-left: 310px;
+  }
+  
+  .menu-social img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Right Side: Form */
+  .menu-subscribe {
+    max-width: 100%;
+    padding-left: 50px;
+  }
+  
+  .menu-subscribe p {
+    margin-bottom: 50px;
+    font-size: 14px;
+    margin-top: 60px;
+    
+  }
+  
+  .menu-subscribe form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  
+  }
+  
+  .menu-subscribe label {
+    font-size: 12px;
+    font-weight: 300;
+  }
+  
+  .menu-subscribe input[type="email"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 10px 5px;
+    font-size: 14px;
+    color: white;
+  }
+  
+  .menu-subscribe input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .checkbox-wrap {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .menu-subscribe button {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-right: 250px;
+    margin-top: -45px;
+  }
+  /* Keyframes for fade and slide up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base animation styles — initially hidden */
+.menu-overlay .menu-overlay-logo,
+.menu-overlay .menu-links a,
+.menu-overlay .menu-social,
+.menu-overlay .menu-subscribe p,
+.menu-overlay .menu-subscribe form {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* When overlay is visible (not hidden), animate in */
+.menu-overlay:not(.hidden) .menu-overlay-logo {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.menu-overlay:not(.hidden) .menu-links a:nth-child(1) {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+.menu-overlay:not(.hidden) .menu-links a:nth-child(2) {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+.menu-overlay:not(.hidden) .menu-links a:nth-child(3) {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.4s;
+}
+.menu-overlay:not(.hidden) .menu-links a:nth-child(4) {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.menu-overlay:not(.hidden) .menu-social {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.menu-overlay:not(.hidden) .menu-subscribe p {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.menu-overlay:not(.hidden) .menu-subscribe form {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.8s;
+} 
+
+
+
+
+
+
+
